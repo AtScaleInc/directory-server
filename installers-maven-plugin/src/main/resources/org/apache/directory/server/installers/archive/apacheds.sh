@@ -142,7 +142,7 @@ if [ "$ADS_ACTION" = "start" ]; then
 
     # Launching ApacheDS
     eval "\"$RUN_JAVA\"" $JAVA_OPTS $ADS_CONTROLS $ADS_EXTENDED_OPERATIONS \
-        -Dlog4j2.configuration="\"file:$ADS_INSTANCE/conf/log4j.properties\"" \
+        -Dlog4j2.configurationFile="\"file:$ADS_INSTANCE/conf/log4j.properties\"" \
         -Dapacheds.log.dir="\"$ADS_INSTANCE/log\"" \
         -classpath "\"$CLASSPATH\"" \
         org.apache.directory.server.UberjarMain "\"$ADS_INSTANCE\"" \
@@ -154,7 +154,7 @@ elif [ "$ADS_ACTION" = "run" ]; then
 
     # Launching ApacheDS
     eval "\"$RUN_JAVA\"" $JAVA_OPTS $ADS_CONTROLS $ADS_EXTENDED_OPERATIONS \
-        -Dlog4j2.configuration="\"file:$ADS_INSTANCE/conf/log4j.properties\"" \
+        -Dlog4j2.configurationFile="\"file:$ADS_INSTANCE/conf/log4j.properties\"" \
         -Dapacheds.log.dir="\"$ADS_INSTANCE/log\"" \
         -classpath "\"$CLASSPATH\"" \
         org.apache.directory.server.UberjarMain "\"$ADS_INSTANCE\""

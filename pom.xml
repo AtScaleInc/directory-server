@@ -68,7 +68,7 @@
     <jetty.version>6.1.14</jetty.version>
     <junit.version>4.12</junit.version>
     <ldapsdk.version>4.1</ldapsdk.version>
-    <log4j.version>1.2.17</log4j.version>
+    <log4j.version>2.18.0</log4j.version>
     <maven.archiver.version>2.6</maven.archiver.version>
     <maven.artifact.version>3.2.5</maven.artifact.version>
     <maven.plugin.api.version>3.2.5</maven.plugin.api.version>
@@ -76,7 +76,6 @@
     <mina.core.version>2.0.9</mina.core.version>
     <plexus.utils.version>3.0.21</plexus.utils.version>
     <slf4j.api.version>1.7.10</slf4j.api.version>
-    <slf4j.log4j12.version>1.7.10</slf4j.log4j12.version>
     <wrapper.version>3.2.3</wrapper.version>
     <pax-exam.version>4.4.0</pax-exam.version>
     <pax-url.version>2.3.0</pax-url.version>
@@ -165,7 +164,6 @@
             <source>1.7</source>
             <target>1.7</target>
             <optimize>true</optimize>
-            <showDeprecations>true</showDeprecations>
             <encoding>ISO-8859-1</encoding>
           </configuration>
         </plugin>
@@ -1118,21 +1116,21 @@
       <!-- Logging dependencies -->
 
       <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-api</artifactId>
-        <version>${slf4j.api.version}</version>
-      </dependency>
-
-      <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-log4j12</artifactId>
-        <version>${slf4j.log4j12.version}</version>
-      </dependency>
-
-      <dependency>
-        <groupId>log4j</groupId>
-        <artifactId>log4j</artifactId>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-core</artifactId>
         <version>${log4j.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-slf4j-impl</artifactId>
+        <version>${log4j.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>log4j-over-slf4j</artifactId>
+        <version>${slf4j.api.version}</version>
       </dependency>
       
       <!-- Other dependencies -->
@@ -1243,16 +1241,20 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- common logging interface -->
     <dependency>
       <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
+      <artifactId>log4j-over-slf4j</artifactId>
     </dependency>
 
-    <!-- logging implementation used for unit tests -->
     <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-log4j12</artifactId>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-slf4j-impl</artifactId>
       <scope>test</scope>
     </dependency>
 

@@ -69,11 +69,16 @@
   	  <artifactId>org.apache.felix.ipojo.annotations</artifactId>
   	  <version>1.8.0</version>
   	</dependency>
-    
-    <!-- Moving the scope of inherited slf4j-log4j12 dependency to compile -->
+
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-slf4j-impl</artifactId>
+      <scope>compile</scope>
+    </dependency>
+
     <dependency>
       <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-log4j12</artifactId>
+      <artifactId>log4j-over-slf4j</artifactId>
       <scope>compile</scope>
     </dependency>
   </dependencies>

@@ -133,6 +133,7 @@ import org.junit.runner.RunWith;
             @CreateTransport(protocol = "UDP", port = 6088),
             @CreateTransport(protocol = "TCP", port = 6088)
     })
+@org.junit.Ignore
 public class SaslGssapiBindITest extends AbstractLdapTestUnit
 {
     private DirContext ctx;

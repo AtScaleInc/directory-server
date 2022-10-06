@@ -72,6 +72,7 @@ import org.junit.runner.RunWith;
             @CreateTransport(protocol = "UDP", address = "127.0.0.1", port = 6087)
     })
 @ApplyLdifFiles("org/apache/directory/server/kerberos/kdc/KerberosIT.ldif")
+@Ignore
 public class KerberosUdpITest extends AbstractKerberosITest
 {
 

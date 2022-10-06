@@ -38,4 +38,4 @@ set ADS_CONTROLS="-Dapacheds.controls="
 set ADS_EXTENDED_OPERATIONS="-Dapacheds.extendedOperations="
 
 REM Launching ApacheDS
-java %ADS_CONTROLS% %ADS_EXTENDED_OPERATIONS% -Dlog4j.configuration="file:../instances/%INSTANCE_NAME%/conf/log4j.properties" -Dapacheds.log.dir=../instances/%INSTANCE_NAME%/log -cp %ADS_CLASSPATH% org.apache.directory.server.UberjarMain ../instances/%INSTANCE_NAME%
+java %ADS_CONTROLS% %ADS_EXTENDED_OPERATIONS% -Dlog4j2.configuration="file:../instances/%INSTANCE_NAME%/conf/log4j.properties" -Dapacheds.log.dir=../instances/%INSTANCE_NAME%/log -cp %ADS_CLASSPATH% org.apache.directory.server.UberjarMain ../instances/%INSTANCE_NAME%

@@ -64,9 +64,9 @@ import org.apache.tools.ant.taskdefs.Execute;
  *  |    |              |    |
  *  |    |              |    +-- libwrapper.jnilib
  *  |    |              |    |
- *  |    |              |    +-- apacheds-wrapper-2.0.0-M20-SNAPSHOT.jar
+ *  |    |              |    +-- apacheds-wrapper-2.0.0-M20-ATSCALE-1-SNAPSHOT.jar
  *  |    |              |    |
- *  |    |              |    +-- apacheds-service-2.0.0-M20-SNAPSHOT.jar
+ *  |    |              |    +-- apacheds-service-2.0.0-M20-ATSCALE-1-SNAPSHOT.jar
  *  |    |              |
  *  |    |              +-- instances/
  *  |    |              |    |

@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  build:
+    image: atscale/apacheds-builder:latest
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    volumes:
+      - "..:/workspace"
+    working_dir: "/workspace"
+    command: "mvn -Dhttps.protocols=TLSv1.2 clean package -DskipTests"
+    # stdin_open: true
+    # entrypoint: /bin/bash

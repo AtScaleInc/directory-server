@@ -72,6 +72,7 @@ Project</a>
             @CreateTransport(protocol = "TCP", port = 6086)
     })
 @ApplyLdifFiles("org/apache/directory/server/kerberos/kdc/KerberosIT.ldif")
+@Ignore
 public class KerberosTcpITest extends AbstractKerberosITest
 {
 

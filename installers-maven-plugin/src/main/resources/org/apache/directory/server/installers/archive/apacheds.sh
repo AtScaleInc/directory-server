@@ -156,7 +156,7 @@ if [ "$ADS_ACTION" = "start" ]; then
 
     # Launching ApacheDS
     eval "\"$RUN_JAVA\"" $JAVA_OPTS $ADS_CONTROLS $ADS_EXTENDED_OPERATIONS $ADS_INTERMEDIATE_RESPONSES \
-        -Dlog4j.configuration="\"file:$ADS_INSTANCE/conf/log4j.properties\"" \
+        -Dlog4j2.configurationFile="\"file:$ADS_INSTANCE/conf/log4j.properties\"" \
         -Dapacheds.shutdown.port="\"$ADS_SHUTDOWN_PORT\"" \
         -Dapacheds.log.dir="\"$ADS_INSTANCE/log\"" \
         -classpath "\"$CLASSPATH\"" \
@@ -202,7 +202,7 @@ elif [ "$ADS_ACTION" = "run" ]; then
 
     # Launching ApacheDS
     eval "\"$RUN_JAVA\"" $JAVA_OPTS $ADS_CONTROLS $ADS_EXTENDED_OPERATIONS $ADS_INTERMEDIATE_RESPONSES \
-        -Dlog4j.configuration="\"file:$ADS_INSTANCE/conf/log4j.properties\"" \
+        -Dlog4j2.configurationFile="\"file:$ADS_INSTANCE/conf/log4j.properties\"" \
         -Dapacheds.log.dir="\"$ADS_INSTANCE/log\"" \
         -Dapacheds.shutdown.port="\"$ADS_SHUTDOWN_PORT\"" \
         -classpath "\"$CLASSPATH\"" \

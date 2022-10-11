@@ -50,4 +50,4 @@ ADS_CONTROLS="-Dapacheds.controls="
 ADS_EXTENDED_OPERATIONS="-Dapacheds.extendedOperations="
 
 # default is start
-java -Xms1024m -Xmx2048m $JAVA_OPTS $ADS_CONTROLS $ADS_EXTENDED_OPERATIONS -Dlog4j.configuration=file:./target/instance/conf/log4j.properties -Dapacheds.log.dir=./target/instance/log -jar $JAR ./target/instance
+java -Xms1024m -Xmx2048m $JAVA_OPTS $ADS_CONTROLS $ADS_EXTENDED_OPERATIONS -Dlog4j2.configurationFile=file:./target/instance/conf/log4j.properties -Dapacheds.log.dir=./target/instance/log -jar $JAR ./target/instance

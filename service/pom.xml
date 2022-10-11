@@ -24,7 +24,7 @@
   <parent>
     <groupId>org.apache.directory.server</groupId>
     <artifactId>apacheds-parent</artifactId>
-    <version>2.0.0.AM26</version>
+    <version>2.0.0.AM26-ATSCALE-1</version>
   </parent>
   
   <artifactId>apacheds-service</artifactId>
@@ -69,12 +69,24 @@
       <artifactId>api-util</artifactId>
     </dependency>
     
-    <!-- Moving the scope of inherited slf4j-log4j12 dependency to compile -->
     <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-log4j12</artifactId>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-slf4j-impl</artifactId>
       <scope>compile</scope>
     </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>log4j-over-slf4j</artifactId>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+
   </dependencies>
   
   <build>
@@ -88,6 +100,9 @@
             <manifest>
               <mainClass>org.apache.directory.server.UberjarMain</mainClass>
             </manifest>
+            <manifestEntries>
+              <Multi-Release>true</Multi-Release>
+            </manifestEntries>
           </archive>
         </configuration>
       </plugin>
@@ -123,4 +138,3 @@
   </build>
 
 </project>
-

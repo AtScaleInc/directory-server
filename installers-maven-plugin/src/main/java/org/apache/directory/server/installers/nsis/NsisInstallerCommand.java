@@ -73,9 +73,9 @@ import org.apache.tools.ant.taskdefs.Execute;
  *                 |    |    |
  *                 |    |    +-- wrapper-3.2.3.jar
  *                 |    |    |
- *                 |    |    +-- apacheds-wrapper-2.0.0-M20-SNAPSHOT.jar
+ *                 |    |    +-- apacheds-wrapper-2.0.0.AM26-ATSCALE-1-SNAPSHOT.jar
  *                 |    |    |
- *                 |    |    +-- apacheds-service-2.0.0-M20-SNAPSHOT.jar
+ *                 |    |    +-- apacheds-service-2.0.0.AM26-ATSCALE-1-SNAPSHOT.jar
  *                 |    |
  *                 |    +-- conf/
  *                 |    |    |
